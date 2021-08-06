@@ -114,6 +114,11 @@
   when:
     - (not service_is_installed) or reconfigure_or_replace
 
+- name: Install libcurl3
+  apt:
+    name: libcurl3
+    state: latest
+
 - name: Install dependencies
   command: "./bin/installdependencies.sh"
   args:
