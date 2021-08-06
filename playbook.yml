@@ -1,0 +1,11 @@
+---
+- name: Setup DevOps Agent
+  hosts: devops
+  remote_user: ubuntu
+
+  vars_files:
+    - vars/vars.yml
+    - vars/secrets.yml
+
+  roles:
+    - azure-devops
