@@ -27,3 +27,16 @@ Install ansible:
 - `sudo apt install python3-pip`
 - `sudo pip3 install ansible`
 
+
+# Ansible
+
+https://medium.com/gsoft-tech/easily-configuring-an-azure-devops-agent-with-ansible-fb9cb0f98b73
+https://github.com/gsoft-inc/ansible-role-azure-devops-agent
+
+
+
+  tasks:
+  - name: delete
+    file:
+      state: absent
+      path: "home/az_devops_agent/agent/bin/Agent.Listener"
