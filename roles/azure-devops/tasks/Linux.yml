@@ -114,9 +114,9 @@
   when:
     - (not service_is_installed) or reconfigure_or_replace
 
-- name: Install libcurl3
+- name: Install libcurl4
   apt:
-    name: libcurl3
+    name: libcurl4
     state: latest
 
 - name: Install dependencies
