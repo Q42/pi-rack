@@ -119,7 +119,6 @@
   args:
     chdir: "{{ az_devops_agent_folder }}"
   become: true
-  become_user: "{{ az_devops_agent_user }}"
 
 - name: Uninstall agent service
   command: ./svc.sh uninstall
