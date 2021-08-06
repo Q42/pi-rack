@@ -49,15 +49,15 @@
   changed_when: false
   check_mode: no
 
-# - name: Check agent version
-#   command: ./bin/Agent.Listener --version
-#   become: true
-#   args:
-#     chdir: "{{ az_devops_agent_folder }}"
-#   register: agent_listener_version
-#   changed_when: false
-#   check_mode: no
-#   when: bin_agent_listener.stat.exists
+- name: Check agent version
+  command: ./bin/Agent.Listener --version
+  become: true
+  args:
+    chdir: "{{ az_devops_agent_folder }}"
+  register: agent_listener_version
+  changed_when: false
+  check_mode: no
+  when: bin_agent_listener.stat.exists
 
 - name: Set agent config facts
   set_fact:
