@@ -114,6 +114,13 @@
   when:
     - (not service_is_installed) or reconfigure_or_replace
 
+- name: Install dependencies
+  command: "./bin/installdependencies.sh"
+  args:
+    chdir: "{{ az_devops_agent_folder }}"
+  become: true
+  become_user: "{{ az_devops_agent_user }}"
+
 - name: Uninstall agent service
   command: ./svc.sh uninstall
   become: true
