@@ -125,7 +125,7 @@
   become: true
   args:
     chdir: "{{ az_devops_agent_folder }}"
-    removes: "{{ az_devops_agent_folder }}/runsvc.sh"
+    removes: "{{ az_devops_agent_folder }}/svc.sh"
   when:
     - service_is_installed
     - reconfigure_or_replace
