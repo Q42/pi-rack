@@ -1,4 +1,10 @@
 ---
+- name: Setup CheckMK Server
+  hosts: checkmk-server
+
+  roles:
+    - { role: install-check_mk-server, install_check_mk_server_site: devops }
+
 - name: Setup DevOps Agent
   hosts: devops
   remote_user: ubuntu

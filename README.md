@@ -33,10 +33,6 @@ Install ansible:
 https://medium.com/gsoft-tech/easily-configuring-an-azure-devops-agent-with-ansible-fb9cb0f98b73
 https://github.com/gsoft-inc/ansible-role-azure-devops-agent
 
+# CheckMK
+- `ansible-galaxy install kso512.install-check_mk-server`
 
-
-  tasks:
-  - name: delete
-    file:
-      state: absent
-      path: "home/az_devops_agent/agent/bin/Agent.Listener"
